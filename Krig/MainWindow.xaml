@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Krig"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="460" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
@@ -24,9 +26,29 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        
+        <Button x:Name="BtnDeal" Content="Deal" Grid.Column="1" Grid.Row="2"   Width="80" Height="30" Margin="10" Click="BtnDeal_Click" />
+        <Button x:Name="BtnPlay" Content="Play" Grid.Column="1" Grid.Row="3" Width="80" Height="30" Margin="10" Click="BtnPlay_Click"/>
+        <GroupBox x:Name="GroupBox" Header="Scores:" Margin="10" Padding="10" Grid.Column="2" Grid.Row="1" Grid.RowSpan="4" Height="150" Width="110">
+            <StackPanel>
+                <Label Name="TxtScore1"/>
+                <Label Name="TxtScore2"/>
+                <Label Name="TxtScore3"/>
+                <Label Name="TxtScore4"/>
+            </StackPanel>
+        </GroupBox>
+        <Label Content="Card Player 1:" Grid.Column="1" Grid.Row="5" Name="Player1"/>
+        <Label Content="Card Player 2:" Grid.Column="2" Grid.Row="5" Name="Player2"/>
+        <Label Content="Card Player 3:" Grid.Column="3" Grid.Row="5" Name="Player3"/>
+        <Label Content="Card Player 4:" Grid.Column="4" Grid.Row="5" Name="Player4"/>
+        <Image x:Name="CardPlayer1" Width="130" Grid.Column="1" Grid.Row="6" Grid.RowSpan="3" Source="/Resources/blue_back.png"/>
+        <Image x:Name="CardPlayer2" Width="130" Grid.Column="2" Grid.Row="6" Grid.RowSpan="3" Source="/Resources/blue_back.png" />
+        <Image x:Name="CardPlayer3" Width="130" Grid.Column="3" Grid.Row="6" Grid.RowSpan="3" Source="/Resources/blue_back.png" />
+        <Image x:Name="CardPlayer4" Width="130" Grid.Column="4" Grid.Row="6" Grid.RowSpan="3" Source="/Resources/blue_back.png" />
+
     </Grid>
 </Window>

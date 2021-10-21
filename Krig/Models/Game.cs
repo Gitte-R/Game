@@ -50,7 +50,6 @@ namespace Krig.Models
         internal List<int> FindWinner()
         {
             List<int> ListOfWinningPlayers = new List<int>();
-            //int numberOfWins = 0;
             List<int> ListOfCardsWon = new List<int>();
 
             for (int i = 0; i < CardDeal.ListOfPlayers.Count; i++)
